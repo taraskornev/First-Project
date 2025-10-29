@@ -178,4 +178,38 @@
 # result = rainfall_stats(data)
 # print(result)
 
+# [1, "a", 2.0]
+# list()
 
+# 1. Створіть список на основі введеної послідовності цілих чисел і надрукуйте другу половину списку. Якщо кількість не парна, то вивести більшу кількість.
+
+# value = "1 3 45 67 8 9 4 56 89 34 12 6 23 1 6"
+# value_list = list(map(int, value.split()))
+# print(value_list[len(value_list)//2:])
+
+# 2. Створіть список на основі введеної послідовності цілих чисел і надрукуйте його елементи таким чином: два останні елементи переміщені з кінця в початок списку без зміни їх початкового порядку.
+
+# value = "1 3 45 67 8 9 4 56 89 34 12 6 23 1 6"
+
+# value_list = list(map(int, value.split()))
+# list_minus2 = value_list[:-2]
+# list_last2 = value_list [-2:]
+
+# print(list_last2 + list_minus2)
+
+
+# 3. Збережіть назви мов світу, які вводяться в одному рядку через пропуск, у списку. Простежте за тим, щоб елементи у списку не зберігались в алфавітному порядку. Відсортуйте список в алфавітному порядку і виведіть його елементи в рядку через пропуск.
+
+# languages = "english german ukrainian russian polish french portugeese spanish danish norvegian"
+# language_list = languages.split()
+# language_list.sort()
+# print(" ".join(language_list))
+
+# 4. Вивести елементи списку в зворотному порядку, не змінюючи сам список
+
+# languages = "english german ukrainian russian polish french portugeese spanish danish norvegian"
+# language_list = languages.split()
+# language_list.sort()
+# print(" ".join(sorted(language_list, reverse=True)))
+
+# 5. Виведіть всі елементи списку з парними індексами. Вводиться список чисел. Всі числа списку знаходяться на одному рядку.
