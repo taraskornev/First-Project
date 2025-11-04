@@ -105,12 +105,18 @@
 
 numbers = input() #ввод чисел
 num = numbers.split()
-num = map(int, num)
-dobutok = 
-print(dobutok)
+num = list(map(int, num))
+# result = 1
+# for n in num:
+#     result = result * n
+# print(result)
 
-
-
+n = 0
+result = 1
+while n < len(numbers):
+    result *= numbers[n]
+    n += 1
+print(result)
 
 
 #13 Напишіть програму для друку елементів певного цілочисельного списку після видалення з нього парних чисел. Значення списку вводяться через пропуск в одному рядку.
