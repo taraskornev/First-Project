@@ -82,14 +82,14 @@ def task5():
 # Вихідні дані:
 
 # {'L': 1, 'o': 3, 'r': 2, 'e': 2, 'm': 3, ' ': 4, 'i': 2, 'p': 1, 's': 2, 'u': 1, 'd': 1, 'l': 1, 't': 2, 'a': 1}
-def task6()
+def task6():
     text = "lorem ipsum dolor sit amet"
     text = list(text)
     letters = {i: text.count(i) for i in text}
     print(letters)
 #task6()
 
-# Напишіть програму, яка приймає рядок символів, і обчислює кількість букв і цифр.
+#7. Напишіть програму, яка приймає рядок символів, і обчислює кількість букв і цифр.
 
 # Вхідні дані:
 
@@ -98,3 +98,94 @@ def task6()
 
 # LETTERS 36
 # DIGITS 5
+def task7():
+    text = "Project Gutenberg offers over 59,000 free eBooks"
+    number_count = 0
+    alpha_count = 0
+    for ch in text:
+        if ch.isdigit():
+            number_count += 1
+        elif ch.isalpha():
+            alpha_count += 1
+    result = {
+        "Letters:": alpha_count,
+        "Digits:": number_count
+    }
+
+    # print(result)
+
+    for key, value in result.items():
+        print(key, value)
+#task7()
+
+# 9. Дано список словників. Кожен словники має 2 пари елементів: ключ 'name' і значення імені студента, ключ 'points' і значення - список балів з різних дисциплін (цілі двоцифрові числа). Надрукуйте найменші значення балів, отримані кожним студентом, в один рядок з пропуском.
+
+# 10. Дано два списки чисел. Порахуйте, скільки унікальних цифр міститься в обох з них.
+def task10():
+    numbers1 = [1, 5, 3, 8, 0, 1]
+    numbers2 = [23, 9, 0, 1, 5]
+    result = len(set(numbers1 + numbers2))
+    print(result)
+#task10()
+
+# numbers1 = {1, 5, 3, 8, 0, 1}
+# numbers2 = {23, 9, 0, 1, 5}
+
+# # объединение множеств: возвращает все уникальные элементы, которые есть в numbers1 или numbers2 (или в обоих)
+# print(numbers1.union(numbers2)) # a | b 
+# print(numbers1 | numbers2) # a | b
+
+# # A - B = A (WITHOUT B)
+# # разность множеств: возвращает элементы, которые есть в numbers1, но отсутствуют в numbers2
+# print(numbers1.difference(numbers2))
+# print(numbers1 - numbers2)
+
+
+# # симметричная разность: элементы, которые есть только в одном из множеств (не пересекаются)
+# print(numbers1.symmetric_difference(numbers2))
+# print(numbers1 ^ numbers2)
+
+# # пересечение множеств: возвращает только те элементы, которые присутствуют и в numbers1, и в numbers2
+# print(numbers1.intersection(numbers2))
+# print(numbers1 & numbers2)
+
+# 11. Дано три словники, в яких ключами є малі букви латинського алфавіту, а значеннями - цілі числа. Ключі у всіх словниках – різні, їх є по 3 в кожному словнику. Об’єднайте всі три словники в один і виведіть його вміст. Підказка. скористайтеся оператором **, що використовується для об’єднання довільної кількості словників.
+def task11():
+    dict1 = {"a": 1,"b": 2,"c": 3,}
+    dict2 = {"d": 4,"e": 5,"f": 6,}
+    dict3 = {"g": 7,"h": 8,"i": 9,}
+    print({**dict1, **dict2, **dict3})
+# task11()
+
+# Створіть словник, який відображає ідентифікатори акцій на біржі. Ключами словника є ідентифікатори акцій, а значеннями - дійсні числа - ціни акцій. Надрукуйте ціни акцій та ідентифікатори у порядку зростання ціни.
+
+# Вихідні дані:
+
+# 10.75 FB
+# 37.2 HPQ
+# 45.23 ACME
+# 205.55 IBM
+# 612.78 AAPL
+
+def task12():
+    stocks = {
+        "FB": 10.75,
+        "HPQ": 37.75,
+        "ACME": 23.75,
+        "IBM": 205.75,
+        "AAPL": 612.75
+        }
+
+    def get_value(item):
+        return item[1]
+
+    for key, value in sorted(stocks.items(), key=get_value):
+        print(value, key)
+# task12()
+
+def count(n):
+    if n > 0:
+        print(n)
+        count(n - 1)
+    return ("Start!")
+print(count(5))
