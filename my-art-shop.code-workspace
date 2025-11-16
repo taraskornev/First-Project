@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "my-art-shop",
+			"path": "../../my-art-shop"
+		},
+		{
+			"name": "DTA",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "my-art-shop",
+		"chat.agent.enabled": true
+	}
+}
